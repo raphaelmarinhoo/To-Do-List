@@ -1,17 +1,19 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import Todo from "./components/Todo";
+import TodoForm from "./components/TodoForm";
 
 function App() {
   const [todos, setTodos] = useState([
     {
       id: 1,
-      text: "criar funcionalidade x no sistema",
+      text: "Criar Funcionalidade x no Sistema",
       category: "Trabalho",
       isCompleted: false,
     },
     {
       id: 2,
-      text: "Ir pra academia",
+      text: "Ir Pra Academia",
       category: "Pessoal",
       isCompleted: false,
     },
@@ -20,27 +22,20 @@ function App() {
       text: "Estudar React",
       category: "Estudos",
       isCompleted: false,
-    }])
+    },
+  ]);
 
   return (
     <div className="app">
       <h1>Lista de Tarefas</h1>
       <div className="todo-list">
         {todos.map((todo) => (
-          <div className="todo">
-            <div className="content">
-              <p>{todo.text}</p>
-              <p className="category">({todo.category})</p>
-            </div>
-          <div>
-          <button>Completar</button>
-          <button>X</button>
-          </div>
-          </div>
+          <Todo todo={todo} />
         ))}
       </div>
+      <TodoForm />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
