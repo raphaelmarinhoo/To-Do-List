@@ -3,14 +3,14 @@ body {
   background-color: #f4f4f4;
   padding: 30px;
   color: #333;
-  background-image: url('./img/work-space-1920x1080.jpg');
+  background-image: url("./img/work-space-1920x1080.jpg");
   background-position: center;
   background-size: cover;
 }
 
 .app {
   max-width: 600px;
-  margin: 0 auto 300px; 
+  margin: 0 auto 300px;
   background-color: #efefef;
   padding: 20px 30px;
   border-radius: 10px;
@@ -40,8 +40,8 @@ button {
   border: none;
   border-radius: 3px;
   cursor: pointer;
-  opacity: .8;
-  transition: .3s;
+  opacity: 0.8;
+  transition: 0.3s;
 }
 
 button:hover {
@@ -77,7 +77,8 @@ button:hover {
   padding-bottom: 1.5rem;
 }
 
-input, select {
+input,
+select {
   padding: 5px;
   margin-bottom: 10px;
   border: 1px solid #ddd;
