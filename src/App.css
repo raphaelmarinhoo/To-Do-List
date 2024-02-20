@@ -96,7 +96,7 @@ select {
 .filter-options {
   display: flex;
   justify-content: space-between;
-  gap: 3rem
+  gap: 3rem;
 }
 
 .filter-options div {

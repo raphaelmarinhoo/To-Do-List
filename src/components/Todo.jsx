@@ -1,5 +1,3 @@
-import React from "react";
-
 const Todo = ({ todo, removeTodo, completeTodo }) => {
   return (
     <div
@@ -12,7 +10,7 @@ const Todo = ({ todo, removeTodo, completeTodo }) => {
       </div>
       <div>
         <button className="complete" onClick={() => completeTodo(todo.id)}>
-          Completar
+          Done
         </button>
         <button className="remove" onClick={() => removeTodo(todo.id)}>
           X

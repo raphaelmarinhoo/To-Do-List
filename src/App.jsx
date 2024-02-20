@@ -10,19 +10,19 @@ function App() {
     {
       id: 1,
       text: "Criar Funcionalidade x no Sistema",
-      category: "Trabalho",
+      category: "Job",
       isCompleted: false,
     },
     {
       id: 2,
       text: "Ir Pra Academia",
-      category: "Pessoal",
+      category: "Personal",
       isCompleted: false,
     },
     {
       id: 3,
       text: "Estudar React",
-      category: "Estudos",
+      category: "Study",
       isCompleted: false,
     },
   ]);
@@ -64,9 +64,9 @@ function App() {
   };
   return (
     <div className="app">
-      <h1>Lista de Tarefas</h1>
+      <h1>Task List</h1>
       <Search search={search} setSearch={setSearch} />
-      <Filter filter={filter} setFilter={setFilter} />
+      <Filter filter={filter} setFilter={setFilter} setSort={setSort} />
       <div className="todo-list">
         {todos
           .filter((todo) =>
@@ -78,6 +78,11 @@ function App() {
           )
           .filter((todo) =>
             todo.text.toLocaleLowerCase().includes(search.toLocaleLowerCase())
+          )
+          .sort((a, b) =>
+            sort === "Asc"
+              ? a.text.localeCompare(b.text)
+              : b.text.localeCompare(a.text)
           )
           .map((todo) => (
             <Todo
